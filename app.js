@@ -19,6 +19,9 @@ app.use('/',authRoutes);
 app.use('/',categoryRoutes);
 app.use('/',productRoutes);
 app.use(errorHandler);
+app.get('/check',(req,res)=>{
+    res.send('hello');
+})
 
 app.listen(PORT,()=>{
     console.log(`Server listening on http://localhost:${PORT}`);
